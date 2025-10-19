@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 import finnhub
 
 # Load environment variables
-load_dotenv()
+load_dotenv(dotenv_path=".env", override=True)
 
 def main():
     # Initialize Finnhub client

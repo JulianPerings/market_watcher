@@ -1,49 +1,87 @@
-# Market Watcher - Finnhub API
+# 🚀 Market Watcher - Finnhub API
 
-A simple Python repository for exploring the Finnhub market data API.
+> A comprehensive Python toolkit for exploring the Finnhub market data API with real-time stock quotes, company profiles, financial news, and AI-powered investment analysis.
 
-## Setup
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.8+-blue.svg" alt="Python Version">
+  <img src="https://img.shields.io/badge/Finnhub-API-green.svg" alt="Finnhub API">
+  <img src="https://img.shields.io/badge/OpenAI-GPT--4-yellow.svg" alt="OpenAI GPT-4">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
+</p>
 
-### 1. Create Virtual Environment
+---
+
+## 📋 Table of Contents
+
+- [✨ Features](#-features)
+- [🚀 Quick Start](#-quick-start)
+- [📊 Example Output](#-example-output)
+- [📚 Resources](#-resources)
+
+---
+
+## ✨ Features
+
+- **📈 Real-time Stock Quotes** - Live stock prices and market data
+- **🏢 Company Profiles** - Detailed company information and financials
+- **📰 Market News** - Latest financial news and sentiment analysis
+- **🤖 AI Investment Advisor** - GPT-4 powered investment recommendations
+- **💹 Technical Indicators** - Market trend analysis tools
+- **📊 Economic Data** - Economic calendars and indicators
+- **₿ Crypto Support** - Cryptocurrency prices and exchanges
+- **🔒 Secure** - Environment-based API key management
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Python 3.8 or higher
+- [Finnhub.io](https://finnhub.io/) account (free tier available)
+- [OpenAI](https://platform.openai.com/) account (for AI features)
+
+### Installation & Setup
 
 ```bash
+# Clone the repository
+git clone https://github.com/JulianPerings/market_watcher.git
+cd market_watcher
+
+# Create virtual environment
 python3 -m venv venv
-source venv/bin/activate  # On Linux/Mac
-# or
-venv\Scripts\activate  # On Windows
-```
+source venv/bin/activate  # Linux/Mac
+# venv\Scripts\activate   # Windows
 
-### 2. Install Dependencies
-
-```bash
+# Install dependencies
 pip install -r requirements.txt
+
+# Configure API keys
+cp .env.example .env
+# Edit .env and add your API keys:
+# FINNHUB_API_KEY=your_finnhub_key_here
+# OPENAI_API_KEY=your_openai_key_here
 ```
 
-### 3. Configure API Key
-
-1. Sign up for a free API key at [Finnhub.io](https://finnhub.io/)
-2. Copy `.env.example` to `.env`:
-   ```bash
-   cp .env.example .env
-   ```
-3. Add your API key to `.env`:
-   ```
-   FINNHUB_API_KEY=your_actual_api_key_here
-   ```
-
-## Usage
-
-Run the example script to test the API:
+### Basic Usage
 
 ```bash
-python example.py
+# Test the Finnhub API connection
+python3 example_finnhub_api_connection.py
+
+# Run AI-powered investment analysis
+python3 openai_market_advisor.py
 ```
 
-## Example Output
+---
 
-(venv) julian@BCWMC3238421057:~/repos/market_watcher$ python3 example.py 
+## 📊 Example Output
+
+### Finnhub API Connection (`example_finnhub_api_connection.py`)
+```bash
+(venv) user@machine:~/market_watcher$ python3 example_finnhub_api_connection.py
+
 ============================================================
-STOCK QUOTE - AAPL (Apple Inc.)
+📈 STOCK QUOTE - AAPL (Apple Inc.)
 ============================================================
 Current Price: $252.29
 Change: $4.84 (1.96%)
@@ -53,7 +91,7 @@ Open: $248.02
 Previous Close: $247.45
 
 ============================================================
-COMPANY PROFILE - AAPL
+🏢 COMPANY PROFILE - AAPL
 ============================================================
 Name: Apple Inc
 Industry: Technology
@@ -62,48 +100,72 @@ Exchange: NASDAQ NMS - GLOBAL MARKET
 Website: https://www.apple.com/
 
 ============================================================
-LATEST MARKET NEWS
+📰 LATEST MARKET NEWS
 ============================================================
-
 1. The stereotype is 'that women want or need relationships more,' but data shows it's men who are more likely to rush down the aisle
    Source: CNBC
    URL: https://www.cnbc.com/2025/10/18/new-data-men-are-more-likely-to-rush-down-the-aislenot-women.html
-
-2. ‘My family is having a crisis’: My mom added my brother to her mortgage. He stopped paying. How does she get him off it?
-   Source: MarketWatch
-   URL: https://www.marketwatch.com/story/my-family-is-having-a-crisis-my-mom-added-my-brother-to-her-mortgage-he-stopped-paying-how-does-she-get-him-off-it-960f55b0
-
-3. The No. 1 travel destination of 2026 is in the U.S., says new report
-   Source: CNBC
-   URL: https://www.cnbc.com/2025/10/18/the-no-1-travel-destination-of-2026-is-in-the-us-says-new-report.html
-
+...
 ============================================================
-API test complete!
-=========================================================
-## Available API Endpoints
+✅ API test complete!
+============================================================
+```
 
-The Finnhub API provides access to:
+### AI Investment Advisor (`openai_market_advisor.py`)
+```bash
+(venv) user@machine:~/market_watcher$ python3 openai_market_advisor.py
 
-- **Stock Quotes**: Real-time and historical stock prices
-- **Company Profile**: Company information and financials
-- **Market News**: Financial news and sentiment analysis
-- **Technical Indicators**: Various technical analysis indicators
-- **Economic Data**: Economic calendars and indicators
-- **Crypto Data**: Cryptocurrency prices and exchanges
+🚀 OpenAI Market Advisor
+============================================================
+📊 Using prebuilt Apple data example...
 
-## Example Scripts
+🧠 APPLE INC. ANALYSIS
+============================================================
+📊 Analysis for: AAPL
+⏰ Generated: 2025-10-19 16:25:54
 
-### `example.py`
-Basic example demonstrating:
-- Fetching real-time stock quotes
-- Getting company profile information
-- Retrieving market news
+OVERALL RECOMMENDATION: BUY
+CONFIDENCE LEVEL: High
 
-## Resources
+KEY ARGUMENTS:
+1. Strong Q4 earnings: Apple's recent earnings report showed a 15% YoY increase in iPhone sales, suggesting strong product demand and financial health.
+2. Technological advancements: The announcement of new AI features in the upcoming iOS update indicates Apple's continuous innovation and potential for future growth.
+3. Strategic partnerships: The partnership with a major automotive manufacturer for CarPlay expansion shows Apple's ability to diversify its revenue streams and expand its market presence.
+4. Dominant market position: As a leader in the technology sector and consumer electronics, Apple has a proven track record of delivering quality products and maintaining customer loyalty.
 
-- [Finnhub API Documentation](https://finnhub.io/docs/api)
-- [Python Client GitHub](https://github.com/Finnhub-Stock-API/finnhub-python)
+RISK FACTORS:
+1. Market saturation: With many of its products, particularly the iPhone, Apple faces the challenge of market saturation which could limit growth.
+2. Dependence on certain products: A significant portion of Apple's revenue comes from the iPhone. If iPhone sales were to decline significantly, it could have a substantial impact on the company's overall performance.
+3. Regulatory risk: As a multinational tech company, Apple faces regulatory risks in various jurisdictions, which could affect its operations and profitability.
 
-## License
+TIME HORIZON: Long-term
 
-MIT
+BRIEF SUMMARY: Given Apple's strong Q4 earnings, continuous innovation, strategic partnerships, and market dominance, a 'Buy' recommendation is suggested with high confidence. Despite potential risks such as market saturation, over-dependence on iPhone sales, and regulatory challenges, Apple's diversified revenue streams and forward-looking strategies show promising potential for long-term investment.
+
+✅ Analysis complete!
+```
+
+---
+
+## 📚 Resources
+
+- 📖 **[Finnhub API Documentation](https://finnhub.io/docs/api)** - Complete API reference
+- 💻 **[Python Client GitHub](https://github.com/Finnhub-Stock-API/finnhub-python)** - Official Python SDK
+- 🤖 **[OpenAI Platform](https://platform.openai.com/)** - Get your OpenAI API key
+- 🚀 **[Finnhub.io](https://finnhub.io/)** - Sign up for your free API key
+
+---
+
+## 📄 License
+
+**MIT License** - See [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+
+**Made with ❤️ for the financial markets community**
+
+[⭐ Star this repo if you found it helpful!](https://github.com/JulianPerings/market_watcher)
+
+</div>
