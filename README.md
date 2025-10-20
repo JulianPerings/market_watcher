@@ -13,12 +13,18 @@
 
 ## 📋 Table of Contents
 
+- [🚀 View the Showcase](#-view-the-showcase)
 - [✨ Features](#-features)
 - [🚀 Quick Start](#-quick-start)
 - [📊 Example Output](#-example-output)
 - [📚 Resources](#-resources)
 
 ---
+
+## 🚀 View the Showcase
+
+[![Open In NBViewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.org/github/JulianPerings/market_watcher/blob/main/market_watcher_showcase.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JulianPerings/market_watcher/blob/main/market_watcher_showcase.ipynb)
 
 ## ✨ Features
 
